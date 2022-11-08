@@ -8,7 +8,7 @@ type ComponentPropsInterface = {
 };
 
 const Layout = ({ children }: ComponentPropsInterface) => {
-  console.log("children", children);
+
   return (
     <>
       <Navbar />

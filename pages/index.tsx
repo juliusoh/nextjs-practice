@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import ArticleList from "../components/ArticleList";
 
 type ArticlesInterface = {
   userId: number;
@@ -10,16 +11,14 @@ type ArticlesInterface = {
 };
 
 export default function Home({ articles }: { articles: ArticlesInterface[] }) {
-  console.log(articles);
+
   return (
     <div>
       <Head>
         <title>NextJs Practice</title>
         <meta name="keywords" content="web development, programming, nextjs" />
       </Head>
-      {articles.map((article) => (
-        <h3 key={article.id}>{article.title}</h3>
-      ))}
+      <ArticleList articles={articles} />
     </div>
   );
 }
